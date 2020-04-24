@@ -683,7 +683,8 @@ prof_only.columns=['dirs','profitable_mov']
 joined = all_mov.merge(prof_only, on='dirs', how='inner')
 
 joined['success_rate']=round(joined.profitable_mov/joined.ttl_mov,2)*100
-display(joined.query('dirs in ["Quentin Tarantino", "Steven Soderbergh", "Robert Rodriguez", "Christopher Nolan", "Clint Eastwood"]'))
+best_rate=joined.query('success_rate==success_rate.max()')
+best_rate
 answer_ls.append(4)
 
 
