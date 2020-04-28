@@ -50,8 +50,7 @@ answer_ls = [] # создадим список с ответами. сюда б�
 # In[65]:
 
 
-data2=data.query('imdb_id in ["tt1345836","tt0413300","tt2395427","tt1032751","tt1298650"]')
-data3=data2.query('budget==budget.max()')
+data3=data.query('budget==budget.max()')
 display(data3)
 answer_ls.append(4)
 
